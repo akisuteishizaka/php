@@ -1,3 +1,9 @@
+<?php
+//　変数
+$message = "Hello World";
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head lang="ja">
@@ -8,7 +14,7 @@
 </head>
 <body>
 <?php
-	echo "hellow world";
+	echo $message;
 ?>
 </body>
 </html>
