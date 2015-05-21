@@ -1,7 +1,7 @@
 <?php
 	
 	$birthday = $_POST['birthday'];
-	$youbi = date("1", strtotime($birthday);
+	$youbi = date("1", strtotime($birthday));
 
 ?>
 
@@ -15,8 +15,10 @@
 </head>
 <body>
 	<h1>PHPの練習</h1>
+	<p>
 	<?php
 		echo $youbi;
 	?>
+	</p>
 </body>
 </html>
