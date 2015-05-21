@@ -23,7 +23,6 @@ $age = 18;
 	} else {
 		echo "お酒はダメよ";
 	}
-	}
 ?>
 </body>
 </html>
