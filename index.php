@@ -2,7 +2,7 @@
 // データベースへの接続
 
 try {
-	$dbh = new PDO('mysq:host=localhost;dbname=blog_app','root');
+	$dbh = new PDO('mysq:host=localhost;dbname=blog_app','dbuser','123456');
 } catch (PDOException $e) {
 	var_dump($e->getMessage());
 	exit;
