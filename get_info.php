@@ -1,3 +1,10 @@
+<?php
+	
+	$birthday = $_POST['birthday'];
+	$youbi = date("1", strtotime($birthday);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="ja">
@@ -8,10 +15,8 @@
 </head>
 <body>
 	<h1>PHPの練習</h1>
-	<form action="get_info.php" method="post">
-		<input type="text" name="birthday" value="">
-		<input type="submit" value="送信">
-	</form>
+	<?php
+		echo $youbi;
+	?>
 </body>
 </html>
-
