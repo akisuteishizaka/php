@@ -1,11 +1,8 @@
 <?php
-//　変数
-$message = "Hello World";
+//　条件分岐
+//　
 
-// $から始まる
-// 英数字_が使える
-// $のあとの数字はダメ
-// 大文字小文字は区別される
+$age = 18;
 
 
 ?>
@@ -19,7 +16,14 @@ $message = "Hello World";
 </head>
 <body>
 <?php
-	echo $message;
+	if ($age > 20) {
+		echo "お酒はOK";
+	} else if ($age > 18) {
+		echo "大学生でもだめよ";
+	} else {
+		echo "お酒はダメよ";
+	}
+	}
 ?>
 </body>
 </html>
