@@ -1,13 +1,7 @@
 <?php
-//　変数
-$message = "Hello World";
+	//　配列
 
-// $から始まる
-// 英数字_が使える
-// $のあとの数字はダメ
-// 大文字小文字は区別される
-
-
+$youbi = array("Sun","Mon","Tue");
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +13,7 @@ $message = "Hello World";
 </head>
 <body>
 <?php
-	echo $message;
+	echo $youbi[1];
 ?>
 </body>
 </html>
