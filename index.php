@@ -1,14 +1,20 @@
 <?php
-//　変数
-$message = "Hello World";
+// データベースへの接続
 
-// $から始まる
-// 英数字_が使える
-// $のあとの数字はダメ
-// 大文字小文字は区別される
+try {
+	$dbh = new PDO('mysq:host=localhost;dbname=blog_app','root');
+} catch (PDOException $e) {
+	var_dump($e->getMessage());
+	exit;
+}
 
+	echo "success!";
+
+	//　切断
+	$dbh = null;
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head lang="ja">
@@ -18,9 +24,6 @@ $message = "Hello World";
 	<title>phpの練習</title>
 </head>
 <body>
-<?php
-	echo $message;
-?>
 </body>
 </html>
 
