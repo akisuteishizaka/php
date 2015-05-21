@@ -1,7 +1,7 @@
 <?php
 	
 	$birthday = $_POST['birthday'];
-	$youbi = date("1", strtotime($birthday));
+	$youbi = date("l", strtotime($birthday));
 
 ?>
 
