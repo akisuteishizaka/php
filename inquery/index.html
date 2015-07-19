@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>お問い合わせフォーム</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<p>お問い合わせ内容を入力してください。</p>
+	
+	<form action="check_inquiry.php" method="post">
+		<dl>
+			<dt>お問い合わせタイトル</dt>
+			<dd><input type="text" name="title" size="50"></dd>
+
+			<dt>お問い合わせ詳細</dt>
+			<dd>
+				<textarea name="message" cols="40" rows="5"></textarea>
+			</dd>
+		</dl>
+
+		<input type="submit" value="お問い合せ内容の確認">
+	</form>
+
+</body>
+</html>
