@@ -62,6 +62,9 @@
                     <li>
                         <a href="/lesson/shop/"><i class="fa fa-fw fa-edit"></i> shop</a>
                     </li>
+                    <li>
+                        <a href="/lesson/blog/"><i class="fa fa-fw fa-edit"></i> blog</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
