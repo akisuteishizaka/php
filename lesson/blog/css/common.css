@@ -1,0 +1,12 @@
+/* common.css */
+/* 2015-07-21 taiti */
+@charset "utf-8";
+
+#bgimage {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('/lesson/blog/img/bgimage.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
