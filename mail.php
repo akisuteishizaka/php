@@ -1,7 +1,11 @@
 <?php
-$to      = 'taiti@stone-rise.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: no-replay@stone-rise.com';
-mail($to, $subject, $message, $headers);
+mb_language("ja");
+mb_internal_encoding("UTF-8");
+ 
+$to = "taiti@stone-rise.com";
+$from = "no-reply@stone-rise.com";
+$subject = "テストのサブジェクト";
+$body = "テスト\nテストテスト\nテストテストテスト\nテストテスト\nテスト";
+ 
+mb_send_mail($to,$subject,$body,"From:".$from);
 ?>
