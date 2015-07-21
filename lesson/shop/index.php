@@ -146,7 +146,7 @@ $recordSet = mysql_query('SELECT m.name, i.* FROM makers m, my_items i WHERE m.i
                           <td><?php echo (htmlspecialchars($table['price'])); ?></td>
                           <td>
                             <a href="/lesson/shop/update.php?id=<?php echo (htmlspecialchars($table{'id'})); ?>">編集</a>
-                            <a href="/lesson/shop/php/delete.php?id=<?php echo (htmlspecialchars($table{'id'})); ?>">削除</a>
+                            <a href="/lesson/shop/php/delete.php?id=<?php echo (htmlspecialchars($table{'id'})); ?>" onclick="return confirm('削除してもよろしいですか？')">削除</a>
                           </td>
                         </tr>
                       </tbody>
