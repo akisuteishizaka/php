@@ -58,44 +58,31 @@
 
                   <!-- 会員登録フォーム -->
                   <form class="form-horizontal" method="post" enctype="multipart/form-data" action="check.php">
+                    <dl class="dl-horizontal">
+                      <dt>ニックネーム</dt>
+                      <dd>
+                        
+                      </dd>
 
-                    <!-- ニックネーム -->
-                    <div class="form-group">
-                      <label class="control-label col-sm-4" for="maker_id">ニックネーム<span class="create_data">　※必須</span></label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" name="name" size="35" maxlength="255" placeholder="ニックネームを登録します。">
-                      </div>
-                    </div>
+                      <dt>メールアドレス</dt>
+                      <dd>
+                        
+                      </dd>
 
-                    <!-- メールアドレス -->
-                    <div class="form-group">
-                      <label class="control-label col-sm-4" for="maker_id">メールアドレス<span class="create_data">　※必須</span></label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" name="email" size="35" maxlength="255" placeholder="メールアドレスを登録します。">
-                      </div>
-                    </div>
+                      <dt>パスワード</dt>
+                      <dd>
+                        【表示されません】
+                      </dd>
 
-                    <!-- パスワード -->
-                    <div class="form-group">
-                      <label class="control-label col-sm-4" for="maker_id">パスワード<span class="create_data">　※必須</span></label>
-                      <div class="col-sm-4">
-                        <input type="password" class="form-control" name="password" size="32" maxlength="32" placeholder="パスワードを登録します。">
-                      </div>
-                    </div>
-
-                    <!-- 写真等 -->
-                    <div class="form-group">
-                      <label class="control-label col-sm-4" for="maker_id">画像ファイル</label>
-                      <div class="col-sm-4">
-                        <input type="file" class="form-control" name="image" maxlength="100">
-                      </div>
-                    </div>
+                      <dt>写真など</dt>
+                      <dd></dd>
+                    </dl>
 
                     <!-- 登録ボタン -->
                     <div class="form-group">
                       <div class="text-center">
                         <a href="/lesson/blog/join/index.php?action=rewrite">書き直す　　</a>
-                        <input type="submit" value="入力内容を確認する" class="btn btn-primary">
+                        <input type="submit" value="登録する" class="btn btn-primary">
                       </div>
                     </div>
                   </form>
@@ -108,15 +95,6 @@
     </div>
     <!-- /.container -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; local_php.stone-rise.com 2015</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- jQuery -->
     <script src="/lesson/blog/js/jquery.js"></script>

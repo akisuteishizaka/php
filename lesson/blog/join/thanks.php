@@ -66,15 +66,7 @@
     </div>
     <!-- /.container -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; local_php.stone-rise.com 2015</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- jQuery -->
     <script src="/lesson/blog/js/jquery.js"></script>
