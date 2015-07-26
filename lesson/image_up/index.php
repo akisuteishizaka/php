@@ -1,29 +1,3 @@
-<!-- お問い合せ内容の確認画面 -->
-
-<?php
-
-	//　お問い合わせタイトル、詳細のセット
-	$title = htmlspecialchars($_POST['title'], ENT_QUOTES);
-	$message = htmlspecialchars($_POST['message'], ENT_QUOTES);
-
-	//　日本語　sjisの設定
-	mb_language('ja');
-	mb_internal_encoding('UTF8');
-
-
-	// Fromアドレスの設定（自動送信<送信元のアドレス>）
-	$name = '自動送信';
-	$email = 'no-reply@stone-rise.com';
-	$header = 'From: '. mb_encode_mimeheader($name) . '<' . $email .'>';
-
-	//　メールの送信
-	$result = mb_send_mail("taiti@stone-rise.com", $title,$message, $header);
-
-
-
-
-?>
-
 <!-- メニューを共通ファイルにして読み込み ファイルのみのためincludeを使用 -->
 <?php
   include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
@@ -49,6 +23,7 @@
             <?php
                 include ($_SERVER['DOCUMENT_ROOT'].'/sidebar.php');
             ?>
+
         </nav>
 
         <div id="page-wrapper">
@@ -61,12 +36,6 @@
                         <h1 class="page-header">
                             PHPの練習 <small>standard php</small>
                         </h1>
-                        <!--
-                        <p><?php // echo $mysql_connect_text; ?></p>
-                        <p><?php // echo $db_connect_text; ?></p>
-                        <p><?php // echo $db_insert_text; ?></p>
-                        -->
-
                         <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
@@ -76,48 +45,32 @@
                 </div>
                 <!-- /.row -->
 
-
-                <!-- データ一覧表示 -->
                 <div class="row">
-                  <div class="col-lg-12">
+                    <div class="col-lg-12">
+                        <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <i class="fa fa-info-circle"></i>  <strong>画像のアップロードシステム</strong>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
 
-										<p>
-										<?php
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h2>アップロードする画像ファイルを選択してください。</h2>
 
-											//　メール送信の確認
-											if ($result) {
-												//　メール送信の成功
-												echo 'お問い合わせ内容を担当者へ送信しました。';
-											} else {
-												echo '担当者への送信に失敗しました。';
-											}
+                        <form action="upload_image.php" method="post" enctype="multipart/form-data">
 
-										?>
-										</p>
-										<p>お問い合わせ内容の確認をしてください。</p>
+                          <div class="form-group">
+                            <label class="control-label" for="filename">画像ファイル<span class="create_data">　※ファイル名は半角英数字のみになります。</span></label>
+                            <input type="file" class="form-control" id="filename" name="filename" placeholder="jpg形式でアップロードしてください。">
+                          </div>
 
-										<ul class="list-group">
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせタイトル</p>
-												<p>
-													<?php
-														echo $title;
-													?>
-												</p>
-											</li>
 
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせの詳細</p>
-												<p>
-													<?php
-														echo nl2br($message);
-													?>
-												</p>
-											</li>
+                          <input type="submit" value="アップロードする" class="btn btn-primary">
 
-										</ul>
-
-                  </div>
+                        </form>
+                    </div>
                 </div>
                 <!-- /.row -->
 

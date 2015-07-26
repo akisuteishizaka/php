@@ -1,29 +1,3 @@
-<!-- お問い合せ内容の確認画面 -->
-
-<?php
-
-	//　お問い合わせタイトル、詳細のセット
-	$title = htmlspecialchars($_POST['title'], ENT_QUOTES);
-	$message = htmlspecialchars($_POST['message'], ENT_QUOTES);
-
-	//　日本語　sjisの設定
-	mb_language('ja');
-	mb_internal_encoding('UTF8');
-
-
-	// Fromアドレスの設定（自動送信<送信元のアドレス>）
-	$name = '自動送信';
-	$email = 'no-reply@stone-rise.com';
-	$header = 'From: '. mb_encode_mimeheader($name) . '<' . $email .'>';
-
-	//　メールの送信
-	$result = mb_send_mail("taiti@stone-rise.com", $title,$message, $header);
-
-
-
-
-?>
-
 <!-- メニューを共通ファイルにして読み込み ファイルのみのためincludeを使用 -->
 <?php
   include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
@@ -80,43 +54,14 @@
                 <!-- データ一覧表示 -->
                 <div class="row">
                   <div class="col-lg-12">
+										<form action="file_up.php" method="post" enctype="multipart/form-data">
+											<dl>
+												<dt>画像ファイル</dt>
+												<dd><input type="file" name="my_img" size="50"></dd>
+											</dl>
 
-										<p>
-										<?php
-
-											//　メール送信の確認
-											if ($result) {
-												//　メール送信の成功
-												echo 'お問い合わせ内容を担当者へ送信しました。';
-											} else {
-												echo '担当者への送信に失敗しました。';
-											}
-
-										?>
-										</p>
-										<p>お問い合わせ内容の確認をしてください。</p>
-
-										<ul class="list-group">
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせタイトル</p>
-												<p>
-													<?php
-														echo $title;
-													?>
-												</p>
-											</li>
-
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせの詳細</p>
-												<p>
-													<?php
-														echo nl2br($message);
-													?>
-												</p>
-											</li>
-
-										</ul>
-
+											<input type="submit" value="アップロードする" class="btn btn-primary">
+										</form>
                   </div>
                 </div>
                 <!-- /.row -->

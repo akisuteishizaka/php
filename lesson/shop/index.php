@@ -21,32 +21,10 @@ $start = ($page - 1) * 5;
 $recordSet = mysql_query('SELECT m.name, i.* FROM makers m, my_items i WHERE m.id=i.maker_id ORDER BY id DESC LIMIT ' . $start . ',5');
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="phpの練習">
-    <title>管理ツール（練習用）</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="/css/sb-admin.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="/css/plugins/morris.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
+<!-- メニューを共通ファイルにして読み込み ファイルのみのためincludeを使用 -->
+<?php
+  include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
+?>
 
 <body>
     <div id="wrapper">
@@ -63,30 +41,11 @@ $recordSet = mysql_query('SELECT m.name, i.* FROM makers m, my_items i WHERE m.i
                 </button>
                 <a class="navbar-brand" href="index.html">PHPの練習</a>
             </div>
-            <!-- Top Menu Items -->
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="">top</a>
-                    </li>
-                    <li>
-                        <a href="/lesson/php/"><i class="fa fa-fw fa-edit"></i> php</a>
-                    </li>
-                    <li>
-                        <a href="/lesson/file_up/"><i class="fa fa-fw fa-edit"></i> file_up</a>
-                    </li>
-                    <li>
-                        <a href="/lesson/inquery/"><i class="fa fa-fw fa-edit"></i> inquery</a>
-                    </li>
-                    <li>
-                        <a href="/lesson/mail/"><i class="fa fa-fw fa-edit"></i> mail</a>
-                    </li>
-                    <li>
-                        <a href="/lesson/shop/"><i class="fa fa-fw fa-edit"></i> shop</a>
-                    </li>
-                </ul>
-            </div>
+
+            <!-- メニューを共通ファイルにして読み込み ファイルのみのためincludeを使用 -->
+            <?php
+                include ($_SERVER['DOCUMENT_ROOT'].'/sidebar.php');
+            ?>
             <!-- /.navbar-collapse -->
         </nav>
 

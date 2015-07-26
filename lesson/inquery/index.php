@@ -1,29 +1,3 @@
-<!-- お問い合せ内容の確認画面 -->
-
-<?php
-
-	//　お問い合わせタイトル、詳細のセット
-	$title = htmlspecialchars($_POST['title'], ENT_QUOTES);
-	$message = htmlspecialchars($_POST['message'], ENT_QUOTES);
-
-	//　日本語　sjisの設定
-	mb_language('ja');
-	mb_internal_encoding('UTF8');
-
-
-	// Fromアドレスの設定（自動送信<送信元のアドレス>）
-	$name = '自動送信';
-	$email = 'no-reply@stone-rise.com';
-	$header = 'From: '. mb_encode_mimeheader($name) . '<' . $email .'>';
-
-	//　メールの送信
-	$result = mb_send_mail("taiti@stone-rise.com", $title,$message, $header);
-
-
-
-
-?>
-
 <!-- メニューを共通ファイルにして読み込み ファイルのみのためincludeを使用 -->
 <?php
   include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
@@ -79,44 +53,22 @@
 
                 <!-- データ一覧表示 -->
                 <div class="row">
-                  <div class="col-lg-12">
+                    <div class="col-lg-12">
+											<p class="form_text">お問い合わせ内容を入力してください。</p>
 
-										<p>
-										<?php
+												<form action="check_inquiry.php" method="post">
 
-											//　メール送信の確認
-											if ($result) {
-												//　メール送信の成功
-												echo 'お問い合わせ内容を担当者へ送信しました。';
-											} else {
-												echo '担当者への送信に失敗しました。';
-											}
+													<div class="form-group">
+														<label class="control-label" for="title">お問い合わせタイトル<span class="create_data">　※必須</span></label>
+														<input type="text" class="form-control" id="title" name="title" size="50" placeholder="お問い合わせタイトルを入力してください。">
+													</div>
 
-										?>
-										</p>
-										<p>お問い合わせ内容の確認をしてください。</p>
-
-										<ul class="list-group">
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせタイトル</p>
-												<p>
-													<?php
-														echo $title;
-													?>
-												</p>
-											</li>
-
-											<li class="list-group-item">
-												<p class="control-label check_text">お問い合わせの詳細</p>
-												<p>
-													<?php
-														echo nl2br($message);
-													?>
-												</p>
-											</li>
-
-										</ul>
-
+													<div class="form-group">
+														<label class="control-label" for="text">お問い合わせ詳細<span class="create_data">　※必須</span></label><br>
+														<textarea name="message" cols="40" rows="5" id="text" class="form-control" placeholder="詳細を入力してください。"></textarea>
+													</div>
+											<input type="submit" value="お問い合せ内容の確認" class="btn btn-primary">
+										</form>
                   </div>
                 </div>
                 <!-- /.row -->

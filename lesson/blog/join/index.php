@@ -96,7 +96,9 @@ if (!empty($_POST)) {
                       <label class="control-label col-sm-5" for="name">ニックネーム<span class="create_data">　※必須</span></label>
                       <div class="col-sm-6">
                         <input type="text" class="form-control" id="name" name="name" size="35" maxlength="255" placeholder="ニックネームを入力してください。">
+                        <?php if ($error['name'] == 'blank') { ?>
                         <p class="error">※ニックネームを入力してください。</p>
+                        <?php } ?>
                       </div>
                     </div>
 

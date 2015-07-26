@@ -1,1 +1,18 @@
+/* 20150723 */
+/* php common.css */
 
+@charset "utf-8";
+
+.form_group {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.create_data {
+	color: #f00;
+}
+
+.check_text {
+	font-size: 120%;
+	font-weight: bold;
+}
