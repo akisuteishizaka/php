@@ -24,4 +24,5 @@
     <!-- datepicker bootstrap -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css">
     <link href="/images/public/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
 </head>

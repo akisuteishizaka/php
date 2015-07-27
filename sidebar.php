@@ -2,7 +2,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="">top</a>
+                        <a href="/">top</a>
                     </li>
                     <li>
                         <a href="/lesson/php/"><i class="fa fa-fw fa-edit"></i> php</a>
@@ -30,6 +30,12 @@
                     </li>
                     <li>
                         <a href="/lesson/survey/"><i class="fa fa-fw fa-edit"></i> アンケートフォーム</a>
+                    </li>
+                    <li>
+                        <a href="/lesson/survey/query_question.php"><i class="fa fa-fw fa-edit"></i> アンケートフォーム検索</a>
+                    </li>
+                    <li>
+                        <a href="/lesson/login/"><i class="fa fa-fw fa-edit"></i> ログイン</a>
                     </li>
             </ul>
         </div>
