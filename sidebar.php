@@ -37,5 +37,11 @@
                     <li>
                         <a href="/lesson/login/"><i class="fa fa-fw fa-edit"></i> ログイン</a>
                     </li>
+                    <li>
+                        <a href="/lesson/slide/"><i class="fa fa-fw fa-edit"></i> スライドショー</a>
+                    </li>
+                    <li>
+                        <a href="/lesson/jquery/"><i class="fa fa-fw fa-edit"></i> jquery</a>
+                    </li>
             </ul>
         </div>

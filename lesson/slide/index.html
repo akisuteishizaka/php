@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>jQueryスライドショー</title>
+    <link href="/images/public/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <style>
+            .thumbnail {
+                width: 125px;
+                height: 83px;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="thumbnails">
+			
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+		<script>
+        $(function() {
+            var files = [
+                'img/2015091101.jpg',
+                'img/2015091601.jpg',
+                'img/2015093001.jpg',
+                'img/201509130203.jpg'
+            ];
+            var img;
+            for (var i = 0; i < files.length; i++) {
+                img = $('<img>').attr('src', files[i]).addClass('thumbnail');
+                $('#thumbnails').append(img);
+            }
+        });
+		</script>
+	</body>
+</html>
